@@ -1,0 +1,760 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.kg_wuqi.com/"
+     xml:base="http://www.kg_wuqi.com/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.kg_wuqi.com#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.kg_wuqi.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasConflict -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasConflict">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasMade -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasMade">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasOrganization">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.kg_wuqi.com#hasParticipate"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasOwn -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasOwn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasParticipate -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasParticipate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#hasUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.kg_wuqi.com#hasUsed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.kg_wuqi.com#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kg_wuqi.com#action_form -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#action_form">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#action_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#action_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#action_participated_member -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#action_participated_member">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#action_point -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#action_point">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_form -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_form">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_holder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_holder">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_manufacturing_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_manufacturing_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_usage_event -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_usage_event">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_usage_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_usage_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#device_weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#device_weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#organization_area -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#organization_area">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#organization_found_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#organization_found_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#organization_member -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#organization_member">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#organization_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#organization_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.kg_wuqi.com#organization_ranking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.kg_wuqi.com#organization_ranking">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kg_wuqi.com#Action -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#Action">
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#Device -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#Device">
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#Organization -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#Organization"/>
+    
+
+
+    <!-- http://www.kg_wuqi.com#Rockets_and_missiles -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#Rockets_and_missiles">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#craft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#aircraft -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#craft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#armedConflict -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#armedConflict">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#conflict"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#militaryCampaign"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#militaryExercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#cannon -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#cannon">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#firearm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#conflict -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#conflict">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#militaryCampaign"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#militaryExercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#country -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#country">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Organization"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#internationalOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#craft -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#craft">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#firearm"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#tank"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#warship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#firearm -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#firearm">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#tank"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#warship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#handgun -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#handgun">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#firearm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#internationalOrganization -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#internationalOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#militaryCampaign -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#militaryCampaign">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Action"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#militaryExercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#militaryExercise -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#militaryExercise">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#rifle -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#rifle">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#firearm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#spacecraft -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#spacecraft">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#craft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#special_gun -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#special_gun">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#firearm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#submachine_gun -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#submachine_gun">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#firearm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#tank -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#tank">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Device"/>
+        <owl:disjointWith rdf:resource="http://www.kg_wuqi.com#warship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kg_wuqi.com#warship -->
+
+    <owl:Class rdf:about="http://www.kg_wuqi.com#warship">
+        <rdfs:subClassOf rdf:resource="http://www.kg_wuqi.com#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kg_wuqi.com#伯利兹 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#伯利兹">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#保加利亚 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#保加利亚">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#南斯拉夫联盟共和国 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#南斯拉夫联盟共和国">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+        <www:hasParticipate rdf:resource="http://www.kg_wuqi.com#科索沃战争"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#孟加拉国 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#孟加拉国">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#巴哈马 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#巴哈马">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#巴林 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#巴林">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#巴西 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#巴西">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#波斯尼亚和黑塞哥维那 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#波斯尼亚和黑塞哥维那">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#玻利维亚 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#玻利维亚">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#白俄罗斯 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#白俄罗斯">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+        <www:hasConflict rdf:resource="http://www.kg_wuqi.com#美国"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#百慕大 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#百慕大">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#科索沃战争 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#科索沃战争">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#conflict"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.kg_wuqi.com#美国 -->
+
+    <owl:NamedIndividual rdf:about="http://www.kg_wuqi.com#美国">
+        <rdf:type rdf:resource="http://www.kg_wuqi.com#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#Rockets_and_missiles"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#aircraft"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#spacecraft"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#cannon"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#handgun"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#rifle"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#special_gun"/>
+            <rdf:Description rdf:about="http://www.kg_wuqi.com#submachine_gun"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.kg_wuqi.com/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.kg_wuqi.com/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.kg_wuqi.com#Action"/>
+                        <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.kg_wuqi.com#hasOrganization"/>
+                                <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/x"/>
+                                <swrl:argument2 rdf:resource="http://www.kg_wuqi.com/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.kg_wuqi.com#Organization"/>
+                        <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.kg_wuqi.com#hasParticipate"/>
+                                <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/y"/>
+                                <swrl:argument2 rdf:resource="http://www.kg_wuqi.com/x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.kg_wuqi.com#Organization"/>
+                        <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.kg_wuqi.com#hasConflict"/>
+                                <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/x"/>
+                                <swrl:argument2 rdf:resource="http://www.kg_wuqi.com/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.kg_wuqi.com#Organization"/>
+                        <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.kg_wuqi.com#hasConflict"/>
+                                <swrl:argument1 rdf:resource="http://www.kg_wuqi.com/y"/>
+                                <swrl:argument2 rdf:resource="http://www.kg_wuqi.com/x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
